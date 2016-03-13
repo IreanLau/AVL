@@ -190,7 +190,11 @@ void AVL<T>::insertpri(TreeNode<T>*&root, T x)
 template<class T>
 void AVL<T>::Deletepri(TreeNode<T>*&root, T x)
 {
+<<<<<<< HEAD
 	if (NULL == root)
+=======
+	/*if (NULL == root)
+>>>>>>> ca6ccaf222545740e0e812fa56c3e50e275d2298
 	{
 		cout << "Node is NULL,can not delete" << endl;
 		exit(1);
@@ -198,6 +202,7 @@ void AVL<T>::Deletepri(TreeNode<T>*&root, T x)
 
 	if (x < root->data)
 	{
+<<<<<<< HEAD
 		Deletepri(root->lson);//在左子树中删除x
 		if (
 			(height(root->rson) - height(root->lson) == 2)
@@ -228,16 +233,35 @@ void AVL<T>::Deletepri(TreeNode<T>*&root, T x)
 				LL(root);
 		}
 	}
+=======
+		Deletepri(root->lson);
+		if (
+			(root->lson &&root->rson) &&
+			(height(root->rson) - height(root->lson) == 2)
+			)
+		{
+			if()
+		}
+	}
+	else if (x>root->rson)
+		Deletepri(root->rson);
+>>>>>>> ca6ccaf222545740e0e812fa56c3e50e275d2298
 	else
 	{
 		if (--(root->freq) == 0)
 		{
+<<<<<<< HEAD
 			if (root->lson&&root->rson)//有两个孩子
 			{
 				TreeNode<T>*temp = node->rson;
 			}
 		}
 	}
+=======
+
+		}
+	}*/
+>>>>>>> ca6ccaf222545740e0e812fa56c3e50e275d2298
 }
 
 void test()
